@@ -2,6 +2,25 @@
 **Smart UI**主要提供了Android开发过程中经常用到的一些UI控件，该库会持续开发，力求解决Android开发过程中的UI痛点
 问题！目前**Smart UI**已经提供了如下控件供大家使用:
 
+使用方法：
+
+1) 增加以下脚本到你的工程根目录的build.gradle文件中
+<pre>
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+</pre>
+
+2）在你的app工程中，增加如下依赖:
+<pre>
+dependencies {
+        compile 'com.github.yuanhoujun:SmartUI:0.2.0'
+}
+</pre>
+
 ### RoundedTextView
 **RoundedTextView**是一个圆形的TextView控件，可以作为展示新消息提示之类的通知控件。
 该控件有如下属性:
