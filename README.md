@@ -16,6 +16,7 @@
     app:radius="15dp"
     app:autoTextSize="true" />
 ```
+![](https://github.com/yuanhoujun/SmartUI/blob/master/snapshot/rounded_textview.png)
 
 ### TabBar
 **TabBar**是一个组合控件，通常与**TabBarGroup**配合使用，使用方法类似RadioButton和RadioGroup，该控件支持的属性
@@ -75,6 +76,8 @@
             android:id="@+id/tab_bar_mine"/>
     </me.foji.smartui.TabBarGroup>
 ```
-具体使用方法请参照例子[sample]()
+![](https://github.com/yuanhoujun/SmartUI/blob/master/snapshot/tabbar.png)
+
+具体使用方法请参照例子[sample](https://github.com/yuanhoujun/SmartUI/tree/master/sample)
 
 如果你有更多很有意思的控件，欢迎Fork这个仓库，推送Pull Request
