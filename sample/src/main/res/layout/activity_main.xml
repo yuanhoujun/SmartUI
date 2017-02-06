@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="me.foji.android.ui.MainActivity"
+    android:orientation="vertical">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/basic_widget"
+        android:textSize="14dp"
+        android:textColor="#333333"
+        android:id="@+id/btn_basic_widget"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/container_widget"
+        android:textSize="14dp"
+        android:textColor="#333333"
+        android:id="@+id/btn_container_widget"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mix_widget"
+        android:textSize="14dp"
+        android:textColor="#333333"
+        android:id="@+id/btn_mix_widget"/>
+</LinearLayout>

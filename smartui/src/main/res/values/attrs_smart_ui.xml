@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 半径 -->
+    <attr name="radius" format="dimension"/>
+    <!-- 填充颜色 -->
+    <attr name="fillColor" format="color"/>
+    <!-- 图标与文字垂直间距 -->
+    <attr name="verticalSpace" format="dimension"/>
+    <!-- 圆形标记与TabBar右侧间距 -->
+    <attr name="badgeMarginRight" format="dimension"/>
+    <!-- 圆形标记与TabBar上方间距 -->
+    <attr name="badgeMarginTop" format="dimension"/>
+    <!-- 文字内容 -->
+    <attr name="text" format="string"/>
+    <!-- 文字大小 -->
+    <attr name="textSize" format="dimension"/>
+    <!-- 文字颜色 -->
+    <attr name="textColor" format="color|reference"/>
+    <!-- 圆形标记是否可见 -->
+    <attr name="badgeVisible" format="boolean"/>
+    <!-- 圆形标记半径 -->
+    <attr name="badgeRadius" format="dimension"/>
+    <!-- 圆形标记填充颜色 -->
+    <attr name="badgeFillColor" format="color"/>
+    <!-- 圆形标记文字 -->
+    <attr name="badgeText" format="string"/>
+    <!-- 圆形标记文字大小 -->
+    <attr name="badgeTextSize" format="dimension"/>
+    <!-- 圆形标记文字颜色 -->
+    <attr name="badgeTextColor" format="color"/>
+    <!-- 图片源 -->
+    <attr name="imageDrawable" format="reference"/>
+    <!-- 选中的单选按钮 -->
+    <attr name="checkedButton" format="reference"/>
+    <!-- 文字大小自动适配 -->
+    <attr name="autoTextSize" format="boolean"/>
+    <!-- 图片Scale Type -->
+    <attr name="imageScaleType" format="enum">
+        <enum name="MATRIX" value="0"/>
+        <enum name="FIT_XY" value="1"/>
+        <enum name="FIT_START" value="2"/>
+        <enum name="FIT_CENTER" value="3"/>
+        <enum name="FIT_END" value="4"/>
+        <enum name="CENTER" value="5"/>
+        <enum name="CENTER_CROP" value="6"/>
+        <enum name="CENTER_INSIDE" value="7"/>
+    </attr>
+    <!-- 图片宽度 -->
+    <attr name="imageWidth" format="dimension"/>
+    <!-- 图片高度 -->
+    <attr name="imageHeight" format="dimension"/>
+
+    <!-- 圆形TextView -->
+    <declare-styleable name="RoundedTextView">
+        <attr name="radius"/>
+        <attr name="fillColor"/>
+    </declare-styleable>
+
+    <!-- TabBar -->
+    <declare-styleable name="TabBar">
+        <attr name="verticalSpace"/>
+        <attr name="badgeMarginRight"/>
+        <attr name="badgeMarginTop"/>
+        <attr name="text"/>
+        <attr name="textSize"/>
+        <attr name="textColor"/>
+        <attr name="badgeTextSize"/>
+        <attr name="badgeTextColor"/>
+        <attr name="imageDrawable"/>
+        <attr name="badgeText"/>
+        <attr name="badgeFillColor"/>
+        <attr name="badgeVisible"/>
+        <attr name="badgeRadius"/>
+        <attr name="imageScaleType"/>
+        <attr name="imageWidth"/>
+        <attr name="imageHeight"/>
+    </declare-styleable>
+
+    <!-- TabBarGroup -->
+    <declare-styleable name="TabBarGroup">
+        <attr name="checkedButton"/>
+    </declare-styleable>
+
+    <!-- SmartTextView -->
+    <declare-styleable name="SmartTextView">
+        <attr name="autoTextSize"/>
+    </declare-styleable>
+</resources>

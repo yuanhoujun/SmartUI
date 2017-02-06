@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Smart UI</string>
+    <string name="basic_widget">基础控件</string>
+    <string name="container_widget">容器控件</string>
+    <string name="mix_widget">搭配控件</string>
+    <string name="tab_bar">TabBar</string>
+    <string name="home">首页</string>
+    <string name="discover">发现</string>
+    <string name="message">消息</string>
+    <string name="mine">我的</string>
+</resources>
