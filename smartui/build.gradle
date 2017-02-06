@@ -1,6 +1,10 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.yuanhoujun'
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.1"
