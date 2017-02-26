@@ -24,6 +24,8 @@ open class SmartTextView(context: Context , attrs: AttributeSet?) : TextView(con
     // Paint
     private var mPaint: Paint? = null
 
+    constructor(context: Context): this(context , null)
+
     init {
         if(null != attrs) {
             val typedArr = context.obtainStyledAttributes(attrs , R.styleable.SmartTextView , 0 , 0)

@@ -1,6 +1,7 @@
 package me.foji.smartui.util
 
 import android.util.Log
+import me.foji.smartui.BuildConfig
 
 /**
  * Logger
@@ -10,7 +11,7 @@ import android.util.Log
 class Logger {
     companion object {
         val TAG = "SmartUI"
-        val DEBUG = true
+        val DEBUG = BuildConfig.DEBUG
 
         fun e(message: String) {
             if(DEBUG) {

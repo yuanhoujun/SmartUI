@@ -61,4 +61,66 @@
             app:autoTextSize="true" />
     </LinearLayout>
 
+    <me.foji.smartui.SmartButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        app:smart_ui_normal_text_color="#333333"
+        app:smart_ui_pressed_text_color="#ff0000"
+        app:smart_ui_disable_text_color="#999999"
+        app:smart_ui_normal_background_color="#f1f1f1"
+        app:smart_ui_pressed_background_color="#00ff00"
+        app:smart_ui_disable_background_color="#0000ff"
+        app:smart_ui_radius="10dp"
+        app:smart_ui_out_border_line_type="SOLID"
+        app:smart_ui_out_border_line_color="#ae9077"
+        app:smart_ui_out_border_line_width="1dp"
+        android:text="弧形按钮"
+        android:textSize="14dp"
+        android:gravity="center"
+        android:padding="10dp"/>
+
+    <me.foji.smartui.SmartButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        app:smart_ui_normal_text_color="#333333"
+        app:smart_ui_pressed_text_color="#ff0000"
+        app:smart_ui_disable_text_color="#999999"
+        app:smart_ui_normal_background_color="#f1f1f1"
+        app:smart_ui_pressed_background_color="#00ff00"
+        app:smart_ui_disable_background_color="#0000ff"
+        app:smart_ui_radius="10dp"
+        app:smart_ui_out_border_line_type="DOTTED"
+        app:smart_ui_out_border_line_color="#ae9077"
+        app:smart_ui_out_border_line_width="1dp"
+        android:text="弧形按钮"
+        android:textSize="14dp"
+        android:gravity="center"
+        android:padding="10dp"/>
+
+    <me.foji.smartui.SmartButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        app:smart_ui_normal_text_color="#333333"
+        app:smart_ui_pressed_text_color="#ff0000"
+        app:smart_ui_disable_text_color="#999999"
+        app:smart_ui_normal_background_color="#f1f1f1"
+        app:smart_ui_pressed_background_color="#00ff00"
+        app:smart_ui_disable_background_color="#0000ff"
+        app:smart_ui_radius="50dp"
+        app:smart_ui_out_border_line_type="DOTTED"
+        app:smart_ui_out_border_line_color="#ae9077"
+        app:smart_ui_out_border_line_width="1dp"
+        android:text="+1"
+        android:textSize="14dp"
+        android:gravity="center"
+        android:padding="10dp"/>
 </LinearLayout>

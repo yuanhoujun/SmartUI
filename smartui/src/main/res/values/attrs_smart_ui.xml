@@ -34,6 +34,33 @@
     <attr name="checkedButton" format="reference"/>
     <!-- 文字大小自动适配 -->
     <attr name="autoTextSize" format="boolean"/>
+    <!-- 按下状态文字颜色 -->
+    <attr name="smart_ui_pressed_text_color" format="color"/>
+    <!-- 正常状态文字颜色 -->
+    <attr name="smart_ui_normal_text_color" format="color"/>
+    <!-- 关闭状态文字颜色 -->
+    <attr name="smart_ui_disable_text_color" format="color"/>
+    <!-- 正常状态背景颜色 -->
+    <attr name="smart_ui_normal_background_color" format="color"/>
+    <!-- 按下状态背景颜色 -->
+    <attr name="smart_ui_pressed_background_color" format="color"/>
+    <!-- 关闭状态背景颜色 -->
+    <attr name="smart_ui_disable_background_color" format="color"/>
+    <!-- 弧度 -->
+    <attr name="smart_ui_radius" format="dimension"/>
+    <!-- 外边框线条宽度 -->
+    <attr name="smart_ui_out_border_line_width" format="dimension"/>
+    <!-- 外边框线条颜色 -->
+    <attr name="smart_ui_out_border_line_color" format="color"/>
+    <!-- 外边框线条类型 -->
+    <attr name="smart_ui_out_border_line_type" format="enum">
+        <enum name="SOLID" value="1"/>
+        <enum name="DOTTED" value="2"/>
+    </attr>
+    <!-- dash宽度 -->
+    <attr name="smart_ui_dash_width" format="dimension"/>
+    <!-- dashgap -->
+    <attr name="smart_ui_dash_gap" format="dimension"/>
     <!-- 图片Scale Type -->
     <attr name="imageScaleType" format="enum">
         <enum name="MATRIX" value="0"/>
@@ -84,5 +111,21 @@
     <!-- SmartTextView -->
     <declare-styleable name="SmartTextView">
         <attr name="autoTextSize"/>
+    </declare-styleable>
+
+    <!-- SmartButton -->
+    <declare-styleable name="SmartButton">
+        <attr name="smart_ui_radius"/>
+        <attr name="smart_ui_pressed_text_color"/>
+        <attr name="smart_ui_normal_text_color"/>
+        <attr name="smart_ui_disable_text_color"/>
+        <attr name="smart_ui_pressed_background_color"/>
+        <attr name="smart_ui_normal_background_color"/>
+        <attr name="smart_ui_disable_background_color"/>
+        <attr name="smart_ui_out_border_line_width"/>
+        <attr name="smart_ui_out_border_line_color"/>
+        <attr name="smart_ui_out_border_line_type"/>
+        <attr name="smart_ui_dash_width"/>
+        <attr name="smart_ui_dash_gap"/>
     </declare-styleable>
 </resources>
