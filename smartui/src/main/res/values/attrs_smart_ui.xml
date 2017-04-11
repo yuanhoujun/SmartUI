@@ -61,6 +61,15 @@
     <attr name="smart_ui_dash_width" format="dimension"/>
     <!-- dashgap -->
     <attr name="smart_ui_dash_gap" format="dimension"/>
+    <!-- 是否显示进度条 -->
+    <attr name="smart_ui_display_progress_bar" format="boolean"/>
+    <!-- 进度条高度 -->
+    <attr name="smart_ui_progress_bar_height" format="dimension"/>
+    <!-- 进度条颜色 -->
+    <attr name="smart_ui_progress_bar_color" format="color"/>
+    <!-- 进度条背景颜色 -->
+    <attr name="smart_ui_progress_bar_background_color" format="color"/>
+
     <!-- 图片Scale Type -->
     <attr name="imageScaleType" format="enum">
         <enum name="MATRIX" value="0"/>
@@ -127,5 +136,12 @@
         <attr name="smart_ui_out_border_line_type"/>
         <attr name="smart_ui_dash_width"/>
         <attr name="smart_ui_dash_gap"/>
+    </declare-styleable>
+    
+    <declare-styleable name="SmartWebView">
+        <attr name="smart_ui_display_progress_bar" />
+        <attr name="smart_ui_progress_bar_height" />
+        <attr name="smart_ui_progress_bar_color" />
+        <attr name="smart_ui_progress_bar_background_color"/>
     </declare-styleable>
 </resources>
