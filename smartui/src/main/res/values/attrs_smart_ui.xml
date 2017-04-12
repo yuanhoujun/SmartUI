@@ -69,6 +69,20 @@
     <attr name="smart_ui_progress_bar_color" format="color"/>
     <!-- 进度条背景颜色 -->
     <attr name="smart_ui_progress_bar_background_color" format="color"/>
+    <!-- 外边框线弧度半径 -->
+    <attr name="smart_ui_out_border_radius" format="dimension"/>
+    <!-- 间隔线宽度 -->
+    <attr name="smart_ui_divider_line_width" format="dimension"/>
+    <!-- 间隔线颜色 -->
+    <attr name="smart_ui_divider_line_color" format="color"/>
+    <!-- 圆点半径 -->
+    <attr name="smart_ui_dot_radius" format="dimension"/>
+    <!-- 圆点颜色 -->
+    <attr name="smart_ui_dot_color" format="color"/>
+    <!-- 输入框宽度 -->
+    <attr name="smart_ui_input_box_width" format="dimension"/>
+    <!-- 密码长度(默认为6) -->
+    <attr name="smart_ui_pwd_ength" format="integer"/>
 
     <!-- 图片Scale Type -->
     <attr name="imageScaleType" format="enum">
@@ -143,5 +157,17 @@
         <attr name="smart_ui_progress_bar_height" />
         <attr name="smart_ui_progress_bar_color" />
         <attr name="smart_ui_progress_bar_background_color"/>
+    </declare-styleable>
+
+    <declare-styleable name="PwdEditText">
+        <attr name="smart_ui_out_border_line_width"/>
+        <attr name="smart_ui_out_border_radius"/>
+        <attr name="smart_ui_out_border_line_color"/>
+        <attr name="smart_ui_divider_line_width"/>
+        <attr name="smart_ui_divider_line_color"/>
+        <attr name="smart_ui_dot_radius"/>
+        <attr name="smart_ui_dot_color"/>
+        <attr name="smart_ui_input_box_width"/>
+        <attr name="smart_ui_pwd_ength"/>
     </declare-styleable>
 </resources>

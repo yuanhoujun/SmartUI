@@ -123,4 +123,11 @@
         android:textSize="14dp"
         android:gravity="center"
         android:padding="10dp"/>
+    <me.foji.smartui.PwdEditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        app:smart_ui_out_border_radius="5dp" />
+
 </LinearLayout>
