@@ -11,7 +11,7 @@ class WebViewScheme(val schemeValue: String,
 
     override fun equals(other: Any?): Boolean {
         if(other is WebViewScheme) {
-            if(schemeValue == other.schemeValue) {
+            if(schemeValue == other.schemeValue && action == other.action) {
                 return true
             }
         }
