@@ -277,11 +277,14 @@ open class SmartWebView(context: Context , attrs: AttributeSet?): WebView(contex
     }
 
     private fun match(uri: Uri): Boolean {
+        var matched = false
+
         mSchemes.filter { it.schemeValue == uri.scheme && it.action == uri.authority }.forEach {
             it.callback.invoke(uri.scheme, uri.authority, paramsToMap(uri.query))
+            matched = true
         }
 
-        return false
+        return matched
     }
 
     private fun paramsToMap(query: String?): Map<String , String> {
