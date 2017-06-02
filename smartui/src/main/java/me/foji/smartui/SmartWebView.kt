@@ -17,6 +17,7 @@ import android.webkit.*
 import android.widget.FrameLayout
 import android.widget.ProgressBar
 import org.jetbrains.anko.dip
+import java.util.*
 
 /**
  * 更强大，更智能的WebView
@@ -34,6 +35,14 @@ open class SmartWebView(context: Context , attrs: AttributeSet?): WebView(contex
     private var mWebChromeClient: WebChromeClient? = null
 
     private var mSchemes: ArrayList<WebViewScheme> = ArrayList()
+    private var interceptors: ArrayList<UrlInterceptor> = ArrayList()
+
+    /**
+     * It's not perfect！！！
+     */
+    interface UrlInterceptor {
+        fun intercept(url: String?)
+    }
 
     init {
         if(null != attrs) {
@@ -131,6 +140,10 @@ open class SmartWebView(context: Context , attrs: AttributeSet?): WebView(contex
             }
 
             override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
+                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    interceptors.forEach { it.intercept(request.url?.toString()) }
+                }
+
                 if(match(request.url)) return true
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -148,9 +161,12 @@ open class SmartWebView(context: Context , attrs: AttributeSet?): WebView(contex
 
             override fun shouldOverrideKeyEvent(view: WebView?, event: KeyEvent?): Boolean {
                 return mWebViewClient?.shouldOverrideKeyEvent(view, event) ?: false
+
             }
 
             override fun shouldOverrideUrlLoading(view: WebView?, url: String): Boolean {
+                interceptors.forEach { it.intercept(url) }
+
                 if(match(url)) return true
 
                 return mWebViewClient?.shouldOverrideUrlLoading(view, url) ?: false
@@ -357,6 +373,13 @@ open class SmartWebView(context: Context , attrs: AttributeSet?): WebView(contex
                        callback: (scheme: String,
                                   action: String,
                                   params: Map<String, String>)->Unit) {
-        mSchemes.add(WebViewScheme(scheme, action, callback))
+        val schemeObj = WebViewScheme(scheme, action, callback)
+        if(!mSchemes.contains(schemeObj)) {
+            mSchemes.add(schemeObj)
+        }
+    }
+
+    fun addIntercetor(interceptor: UrlInterceptor) {
+        interceptors.add(interceptor)
     }
 }

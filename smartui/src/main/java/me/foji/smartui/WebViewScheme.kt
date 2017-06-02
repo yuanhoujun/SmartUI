@@ -7,4 +7,15 @@ package me.foji.smartui
  */
 class WebViewScheme(val schemeValue: String,
                     val action: String,
-                    val callback: (scheme: String, action: String, params: Map<String, String>)->Unit)
+                    val callback: (scheme: String, action: String, params: Map<String, String>)->Unit) {
+
+    override fun equals(other: Any?): Boolean {
+        if(other is WebViewScheme) {
+            if(schemeValue == other.schemeValue) {
+                return true
+            }
+        }
+
+        return false
+    }
+}
