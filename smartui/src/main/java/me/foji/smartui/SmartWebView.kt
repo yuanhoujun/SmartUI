@@ -277,7 +277,7 @@ open class SmartWebView(context: Context , attrs: AttributeSet?): WebView(contex
     }
 
     private fun match(uri: Uri): Boolean {
-        mSchemes.filter { it.schemeValue == uri.scheme }.forEach {
+        mSchemes.filter { it.schemeValue == uri.scheme && it.action == uri.authority }.forEach {
             it.callback.invoke(uri.scheme, uri.authority, paramsToMap(uri.query))
         }
 
