@@ -17,6 +17,8 @@ import android.webkit.*
 import android.widget.FrameLayout
 import android.widget.ProgressBar
 import org.jetbrains.anko.dip
+import java.net.URLDecoder
+import java.net.URLEncoder
 import java.util.*
 
 /**
@@ -280,7 +282,7 @@ open class SmartWebView(context: Context , attrs: AttributeSet?): WebView(contex
         var matched = false
 
         mSchemes.filter { it.schemeValue == uri.scheme && it.action == uri.authority }.forEach {
-            it.callback.invoke(uri.scheme, uri.authority, paramsToMap(uri.query))
+            it.callback.invoke(uri.scheme, uri.authority, paramsToMap(uri.encodedQuery))
             matched = true
         }
 
@@ -293,7 +295,7 @@ open class SmartWebView(context: Context , attrs: AttributeSet?): WebView(contex
             val queryArr = query!!.split("&")
             queryArr.map { it.split("=") }
                     .filter { it.size > 1 }
-                    .forEach { map.put(it[0] , it[1]) }
+                    .forEach { map.put(it[0] , URLDecoder.decode(it[1], "UTF-8")) }
         }
 
         return map
