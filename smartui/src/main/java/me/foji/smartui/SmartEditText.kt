@@ -6,6 +6,7 @@ import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
 import android.util.AttributeSet
+import android.util.Log
 import android.view.MotionEvent
 import android.widget.EditText
 import org.jetbrains.anko.dip
@@ -70,8 +71,8 @@ class SmartEditText(context: Context, attrs: AttributeSet?): EditText(context, a
         if(MotionEvent.ACTION_UP == event.action && mDeleteIsVisible) {
             val bounds = mDrawableRight!!.bounds
             val x = event.x
-            if(x >= right - bounds.width() - dip(5)
-                    && x <= right - paddingRight + dip(5)) {
+
+            if(x >= width - bounds.width() - dip(5) && x <= width - paddingRight + dip(5)) {
                 text = null
                 return true
             }
