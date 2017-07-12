@@ -83,6 +83,8 @@
     <attr name="smart_ui_input_box_width" format="dimension"/>
     <!-- 密码长度(默认为6) -->
     <attr name="smart_ui_pwd_ength" format="integer"/>
+    <!-- 显示删除按钮 -->
+    <attr name="smart_ui_delete_visible" format="boolean" />
 
     <!-- 图片Scale Type -->
     <attr name="imageScaleType" format="enum">
@@ -169,5 +171,9 @@
         <attr name="smart_ui_dot_color"/>
         <attr name="smart_ui_input_box_width"/>
         <attr name="smart_ui_pwd_ength"/>
+    </declare-styleable>
+
+    <declare-styleable name="SmartEditText">
+        <attr name="smart_ui_delete_visible" />
     </declare-styleable>
 </resources>
