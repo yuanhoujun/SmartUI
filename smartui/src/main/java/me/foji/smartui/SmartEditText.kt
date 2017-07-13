@@ -6,7 +6,6 @@ import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
 import android.util.AttributeSet
-import android.util.Log
 import android.view.MotionEvent
 import android.widget.EditText
 import org.jetbrains.anko.dip
@@ -20,11 +19,13 @@ class SmartEditText(context: Context, attrs: AttributeSet?): EditText(context, a
     private var mDeleteVisible = true
     private var mDrawableRight: Drawable? = null
     private var mDeleteIsVisible = false
+    private var mAccuracy = dip(5f).toFloat()
 
     init {
         if(null != attrs) {
             val arr = context.obtainStyledAttributes(attrs, R.styleable.SmartEditText, 0, 0)
             mDeleteVisible = arr.getBoolean(R.styleable.SmartEditText_smart_ui_delete_visible, true)
+            mAccuracy = arr.getDimension(R.styleable.SmartEditText_smart_ui_accuracy, dip(5f))
             arr.recycle()
         }
 
@@ -59,6 +60,11 @@ class SmartEditText(context: Context, attrs: AttributeSet?): EditText(context, a
         })
     }
 
+    /**
+     * 设置删除按钮是否可见
+     *
+     * @param visible true 显示，false 隐藏
+     */
     fun setDeleteVisible(visible: Boolean) {
         mDeleteVisible = visible
         if(!visible) {
@@ -67,12 +73,21 @@ class SmartEditText(context: Context, attrs: AttributeSet?): EditText(context, a
         }
     }
 
+    /**
+     * 设置删除按钮点击误差（X轴点击范围）
+     *
+     * @param value 误差值
+     */
+    fun setAccuracy(value: Float) {
+        mAccuracy = value
+    }
+
     override fun onTouchEvent(event: MotionEvent): Boolean {
         if(MotionEvent.ACTION_UP == event.action && mDeleteIsVisible) {
             val bounds = mDrawableRight!!.bounds
             val x = event.x
 
-            if(x >= width - bounds.width() - dip(5) && x <= width - paddingRight + dip(5)) {
+            if(x >= width - bounds.width() - mAccuracy && x <= width - paddingRight + mAccuracy) {
                 text = null
                 return true
             }

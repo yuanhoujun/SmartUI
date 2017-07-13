@@ -85,6 +85,8 @@
     <attr name="smart_ui_pwd_ength" format="integer"/>
     <!-- 显示删除按钮 -->
     <attr name="smart_ui_delete_visible" format="boolean" />
+    <!-- 精确度（使用dp标注，X轴方向) -->
+    <attr name="smart_ui_accuracy" format="dimension"/>
 
     <!-- 图片Scale Type -->
     <attr name="imageScaleType" format="enum">
@@ -175,5 +177,6 @@
 
     <declare-styleable name="SmartEditText">
         <attr name="smart_ui_delete_visible" />
+        <attr name="smart_ui_accuracy" />
     </declare-styleable>
 </resources>
