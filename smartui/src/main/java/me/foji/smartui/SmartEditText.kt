@@ -25,7 +25,7 @@ class SmartEditText(context: Context, attrs: AttributeSet?): EditText(context, a
         if(null != attrs) {
             val arr = context.obtainStyledAttributes(attrs, R.styleable.SmartEditText, 0, 0)
             mDeleteVisible = arr.getBoolean(R.styleable.SmartEditText_smart_ui_delete_visible, true)
-            mAccuracy = arr.getDimension(R.styleable.SmartEditText_smart_ui_accuracy, dip(5f))
+            mAccuracy = arr.getDimension(R.styleable.SmartEditText_smart_ui_accuracy, dip(5f).toFloat())
             arr.recycle()
         }
 
