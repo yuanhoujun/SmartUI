@@ -7,7 +7,7 @@ import android.text.TextUtils
 import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.MotionEvent
-import android.widget.EditText
+import android.widget.AutoCompleteTextView
 import org.jetbrains.anko.dip
 
 /**
@@ -15,7 +15,7 @@ import org.jetbrains.anko.dip
  *
  * @author Scott Smith 2017-07-12 14:27
  */
-class SmartEditText(context: Context, attrs: AttributeSet?): EditText(context, attrs) {
+class SmartEditText(context: Context, attrs: AttributeSet?): AutoCompleteTextView(context, attrs) {
     private var mDeleteVisible = true
     private var mDrawableRight: Drawable? = null
     private var mDeleteIsVisible = false
