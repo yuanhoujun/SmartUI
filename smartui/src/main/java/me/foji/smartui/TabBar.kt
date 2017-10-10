@@ -388,6 +388,8 @@ class TabBar : ViewGroup , Checkable , Drawable.Callback {
             val stateDrawable = mImageDrawable as StateListDrawable
             stateDrawable.state = drawableState
             mImageView!!.setImageDrawable(stateDrawable.current)
+        } else {
+            mImageView!!.setImageDrawable(mImageDrawable)
         }
 
         updateTextColor()
