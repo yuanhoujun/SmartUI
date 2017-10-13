@@ -16,9 +16,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".BasicWidgetActivity"/>
-        <activity android:name=".MixActivity"/>
-        <activity android:name=".TabBarActivity"/>
+        <activity android:name=".BasicWidgetActivity" />
+        <activity android:name=".MixActivity" />
+        <activity android:name=".TabBarActivity" />
+        <activity android:name=".DialogActivity" />
     </application>
 
 </manifest>

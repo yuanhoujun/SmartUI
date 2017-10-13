@@ -28,4 +28,11 @@
         android:textSize="14dp"
         android:textColor="#333333"
         android:id="@+id/btn_mix_widget"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog"
+        android:textSize="14dp"
+        android:textColor="#333333"
+        android:id="@+id/btn_dialog"/>
 </LinearLayout>

@@ -22,5 +22,9 @@ class MainActivity : AppCompatActivity() {
         btn_mix_widget.setOnClickListener {
             startActivity<MixActivity>()
         }
+
+        btn_dialog.setOnClickListener {
+            startActivity<DialogActivity>()
+        }
     }
 }
